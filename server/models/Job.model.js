@@ -20,7 +20,6 @@ const jobSchema = new mongoose.Schema({
     },
     level: {
         type: String,
-        enum: ['Beginner Level', 'Intermediate Level', 'Senior Level'],
         required: true
     },
     category: {
