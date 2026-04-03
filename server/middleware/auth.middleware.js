@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 import Company from "../models/Company.model.js";
 
-// USER AUTH
+// User auth
 export const userAuth = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
@@ -40,7 +40,7 @@ export const userAuth = async (req, res, next) => {
 };
 
 
-// COMPANY AUTH
+// company authen
 export const companyAuth = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;

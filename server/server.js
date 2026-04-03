@@ -4,8 +4,9 @@ import 'dotenv/config';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.routes.js';
 import comapnyRoutes from './routes/company.routes.js';
-import cloudinary from './config/cloudinary.js'
 import connectCloudinary from './config/cloudinary.js';
+import jobRoutes from './routes/job.routes.js';
+import userRoutes from './routes/user.routes.js';
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/company', comapnyRoutes);
+app.use('/api/jobs',jobRoutes);
+app.use('/api/users', userRoutes);
 
 
 const PORT = process.env.PORT || 5000;

@@ -18,11 +18,10 @@ const jobApplicationSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['Pending', 'Accepted', 'Rejected'],
         default: 'Pending'
     },
     resume: {
-        type: String,   // Cloudinary URL 
+        type: String,  
         default: ''
     },
     date: {
