@@ -29,7 +29,7 @@ const About = () => {
       <div className='flex-1 container px-4 2xl:px-20 mx-auto my-10'>
 
        
-        <div className='bg-[#2d5282] rounded-2xl p-8 mb-6 text-white'>
+        <div className='bg-[#1e2939] rounded-2xl p-8 mb-6 text-white'>
           <h1 className='text-2xl md:text-3xl font-bold mb-2'>About HireHub</h1>
           <p className='text-slate-300 text-sm leading-relaxed max-w-2xl'>
             HireHub is a job portal that connects job seekers with companies.

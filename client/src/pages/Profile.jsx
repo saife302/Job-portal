@@ -119,7 +119,7 @@ const Profile = () => {
   }
 
   return (
-    <div className='min-h-screen flex flex-col bg-[#F8FAFC]'>
+    <div className='min-h-screen flex flex-col bg-[#1e2939]'>
       <Navbar />
 
       <div className='flex-1 flex justify-center items-start py-10 px-4 sm:px-6 lg:px-8'>

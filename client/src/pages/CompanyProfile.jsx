@@ -51,7 +51,7 @@ const CompanyProfile = () => {
 
     
       <div className='bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden'>
-        <div className='h-28 bg-[#1e3a5f]'></div>
+        <div className='h-28 bg-[#1e2939]'></div>
 
         <div className='px-6 pb-6'>
           <div className='flex justify-between items-start -mt-10 flex-wrap gap-3'>
