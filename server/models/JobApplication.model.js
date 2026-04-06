@@ -24,6 +24,12 @@ const jobApplicationSchema = new mongoose.Schema({
         type: String,  
         default: ''
     },
+    interviewDate: {
+        type: Date
+    },
+    interviewLink: {
+        type: String
+    },
     date: {
         type: Date,
         default: Date.now

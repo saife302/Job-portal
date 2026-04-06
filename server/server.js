@@ -3,15 +3,20 @@ import cors from 'cors';
 import 'dotenv/config';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.routes.js';
-import comapnyRoutes from './routes/company.routes.js';
+import companyRoutes from './routes/company.routes.js';
 import connectCloudinary from './config/cloudinary.js';
 import jobRoutes from './routes/job.routes.js';
 import userRoutes from './routes/user.routes.js';
 
 const app = express();
 
-await connectDB();
-await connectCloudinary();
+try {
+  await connectDB();
+  await connectCloudinary();
+} catch (error) {
+  console.error(error);
+  process.exit(1);
+}
 
 // Middlewares
 app.use(cors({ origin: process.env.CLIENT_URL }));
@@ -23,7 +28,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/company', comapnyRoutes);
+app.use('/api/company', companyRoutes);
 app.use('/api/jobs',jobRoutes);
 app.use('/api/users', userRoutes);
 

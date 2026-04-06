@@ -8,7 +8,9 @@ router.get('/', getJobs);
 
 
 //route to get job by Id
-router.get('/:id', getJobById)
+router.get('/:id', getJobById);
+
+//delete jobs
 
 
 

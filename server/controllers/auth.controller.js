@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import generateToken from "../utils/generateToken.js";
 
 export const registerUser = async (req, res) => {
   try {
@@ -13,7 +14,7 @@ export const registerUser = async (req, res) => {
       });
     }
 
-    const normalizedEmail = email.toLowerCase();
+    const normalizedEmail = email.trim().toLowerCase();
 
     const existingUser = await User.findOne({ email: normalizedEmail });
     if (existingUser) {
@@ -31,11 +32,7 @@ export const registerUser = async (req, res) => {
       password: hashedPassword,
     });
 
-    const token = jwt.sign(
-      { id: user._id },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRY }
-    );
+    const token = generateToken(user._id);
 
     res.status(201).json({
       success: true,
@@ -69,7 +66,7 @@ export const loginUser = async (req, res) => {
       });
     }
 
-    const normalizedEmail = email.toLowerCase();
+    const normalizedEmail = email.trim().toLowerCase();
 
     const user = await User.findOne({ email: normalizedEmail });
     if (!user) {
@@ -87,11 +84,7 @@ export const loginUser = async (req, res) => {
       });
     }
 
-    const token = jwt.sign(
-      { id: user._id },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRY }
-    );
+    const token = generateToken(user._id);
 
     res.status(200).json({
       success: true,
