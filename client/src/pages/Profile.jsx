@@ -119,7 +119,7 @@ const Profile = () => {
   }
 
   return (
-    <div className='min-h-screen flex flex-col bg-[#1e2939]'>
+    <div className='min-h-screen flex flex-col bg-[#F8FAFC]'>
       <Navbar />
 
       <div className='flex-1 flex justify-center items-start py-10 px-4 sm:px-6 lg:px-8'>
@@ -129,7 +129,7 @@ const Profile = () => {
           <div className='bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden relative'>
             
             {/* Top Gradient Banner */}
-            <div className='h-32 sm:h-40 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600' />
+            <div className='h-32 sm:h-40 bg-gradient-to-r from-[#1e2939] to-[#263445]' />
 
             <div className='px-6 sm:px-10 pb-8'>
               <div className='flex flex-col sm:flex-row sm:items-end justify-between -mt-12 sm:-mt-16 mb-6 gap-4'>
