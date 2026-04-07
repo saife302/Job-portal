@@ -60,7 +60,7 @@ function Navbar() {
             {companyToken ? (
               <button
                 onClick={() => navigate('/dashboard')}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+                className="text-gray-600 hover:text-blue-600 transition-colors text-sm font-medium max-sm:hidden"
               >
                 Recruiter
               </button>
